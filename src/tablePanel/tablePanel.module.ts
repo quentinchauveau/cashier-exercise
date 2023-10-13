@@ -1,11 +1,11 @@
 import { Module } from '@nestjs/common';
 import { TablePanelController } from './tablePanel.controller';
 import { TablePanelService } from './tablePanel.service';
-import { PlanModule } from '../plan/plan.module';
+import { DataModule } from '../data.module';
 
 @Module({
   controllers: [TablePanelController],
   providers: [TablePanelService],
-  imports: [PlanModule],
+  imports: [DataModule],
 })
 export class TablePanelModule {}

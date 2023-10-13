@@ -1,4 +1,5 @@
 import { Order } from './order.model';
+import { Product } from './product.model';
 
 export enum TypeTable {
   square_2 = 'square_dining_table_2',
@@ -33,8 +34,15 @@ export class Table {
     this.position = this.getPositionSchema(x, y);
   }
 
-  public addOrder() {
-    this.order = new Order();
+  public addProductOrder(product: Product, quantity: number) {
+    if (this.order == null) this.order = new Order(this.id);
+    // we clone the object to prevent any change of the product parameter pass by referencee
+    const product_clone = Object.assign(new Product(), product);
+    this.order?.addProduct(product_clone, quantity);
+  }
+
+  public close() {
+    this.order = null;
   }
 
   private getPositionSchema(x: number, y: number): PositionSchemaInterface {

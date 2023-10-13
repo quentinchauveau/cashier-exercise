@@ -19,10 +19,9 @@ body {
   }
 }
 button.btn-lg {
-  height: 70px;
+  height: 60px;
 }
-
-table > thead.sticky-thead { 
-  position: sticky;
-  top: 0;
+.badge-table {
+  top: 30px;
+  right: 30px;
 }

@@ -1,5 +1,6 @@
-import { Controller, Get, Param, Post, Render, Res } from '@nestjs/common';
+import { Controller, Get, Param, Post, Render, Req, Res } from '@nestjs/common';
 import { TablePanelService } from './tablePanel.service';
+import Handlebars from 'handlebars';
 
 @Controller('tables')
 export class TablePanelController {
@@ -19,12 +20,35 @@ export class TablePanelController {
   @Render('table-panel/table-panel.hbs')
   getTable(@Param() params: any) {
     this.service.getTable(params.id);
-    return { table: this.service.getTable(params.id) };
+    return {
+      table: this.service.getTable(params.id),
+    };
   }
 
-  @Post('/addOrder')
-  addOrder() {
-    this.service.addOrder();
+  @Post('/addProductOrder/:id')
+  addProductOrder(@Param() params: any, @Req() req) {
+    this.service.addProductOrder(params.id, req?.body?.params?.quantity);
     return 'ok';
+  }
+
+  @Get('/getProducts/:id')
+  getProducts(@Param() params: any) {
+    return Handlebars.partials.panelProducts({
+      products: this.service.getProducts(params.id),
+    });
+  }
+
+  @Get('/getOrder')
+  getOrder() {
+    return Handlebars.partials.panelOrder({
+      order: this.service.table?.order,
+      displayActions: true,
+    });
+  }
+
+  @Post('/close')
+  close(@Res() res) {
+    this.service.closeOrder();
+    return res.status(302).redirect(`${this.service.table.id}`);
   }
 }
