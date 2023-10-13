@@ -1,0 +1,28 @@
+@import url('./fontawesome-free/css/all.min.css');
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+/** Override niceadmin astyle to remove the sidebar */
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+}
+#main {
+  flex: 1;
+}
+@media (min-width: 1200px) {
+  #main,
+  #footer {
+    margin-left: auto;
+  }
+}
+button.btn-lg {
+  height: 70px;
+}
+
+table > thead.sticky-thead { 
+  position: sticky;
+  top: 0;
+}
