@@ -4,33 +4,23 @@ import { Product } from './product.model';
 export enum TypeTable {
   square_2 = 'square_dining_table_2',
   square_4 = 'square_dining_table_4',
+  rectangle_6 = 'rectangle_dining_table_6',
+  rectangle_8 = 'rectangle_dining_table_8',
   round_4 = 'round_dining_table_4',
-  rectangle = '',
 }
 export interface PositionSchemaInterface {
   posX: number;
   posY: number;
-  nbBlockX: number;
-  nbBlockY: number;
 }
 export class Table {
   id: number;
   type: TypeTable;
-  maxSeat: number;
-  nbUser = 0;
   position: PositionSchemaInterface;
   order: Order;
 
-  constructor(
-    id: number,
-    type: TypeTable,
-    maxSeat: number,
-    x: number,
-    y: number,
-  ) {
+  constructor(id: number, type: TypeTable, x: number, y: number) {
     this.id = id;
     this.type = type;
-    this.maxSeat = maxSeat;
     this.position = this.getPositionSchema(x, y);
   }
 
@@ -49,8 +39,6 @@ export class Table {
     return {
       posX: x,
       posY: y,
-      nbBlockX: this.maxSeat / 2,
-      nbBlockY: this.maxSeat / 2,
     };
   }
 }

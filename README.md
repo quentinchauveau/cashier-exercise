@@ -24,7 +24,12 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Framework utilisé: [Nest](https://github.com/nestjs/nest) et [Fastify](https://fastify.dev/)
+Version de node: v18.18.0
+Librairies: [Bootstrap](https://getbootstrap.com/) et [Handlebar](https://handlebarsjs.com/)
+
+Ceci est un projet étudiant à destination des étudiants de [WebTech institute] (https://webtech.institute/). 
+L'objectif est de mettre en place une base de données et de créer un schéma de données qui soit adapté au projet. La plateforme doit pouvoir tourner à l'identique, sauf que les données doivent persister dans le temps (même avec un arrêt/redémarrage du serveur).
 
 ## Installation
 
@@ -43,6 +48,9 @@ $ npm run start:dev
 
 # production mode
 $ npm run start:prod
+
+# run lint
+$ npm run lint
 ```
 
 ## Test

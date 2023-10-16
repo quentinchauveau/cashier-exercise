@@ -1,7 +1,7 @@
  <script>
     function convertTimestamp(timestamp) {
         const date = new Date(timestamp);
-        const formattedDate = date.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute:'numeric'});
+        const formattedDate = date.toLocaleDateString('fr-FR', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute:'numeric'});
         return formattedDate;
     }
 </script>
@@ -10,7 +10,7 @@
         <thead class="sticky-top bg-light">
             <tr>
             <th scope="col">#</th>
-            <th scope="col">N° de Facture</th>
+            <th scope="col" style="max-width: 150px; min-width: 150px;">N° de Facture</th>
             <th scope="col">N°  de table</th>
             <th scope="col" class="text-center">Date</th>
             <th scope="col" class="text-center">Montant Total</th>
@@ -21,7 +21,7 @@
             {{#each orders}}
             <tr> 
                     <th scope="row">{{math @index "+" 1}}</th>
-                    <td class="text-truncate" style="max-width: 150px;">{{this.id}}</td>
+                    <td class="text-truncate" style="max-width: 150px; min-width: 150px;">{{this.id}}</td>
                     <td class="text-center">{{this.id_table}}</td>
                     <td class="text-center">
                         <script>

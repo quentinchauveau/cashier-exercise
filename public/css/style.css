@@ -8,6 +8,10 @@ html, body {
 }
 body {
   display: flex;
+  background-color: var(--bs-body-bg);
+}
+header {
+  background-color: unset;
 }
 #main {
   flex: 1;
@@ -24,4 +28,34 @@ button.btn-lg {
 .badge-table {
   top: 30px;
   right: 30px;
+}
+.card-title {
+  color: unset;
+}
+.table-label {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 70px;
+  width: 70px;
+}
+.table-label  span {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+a {
+  color: unset;
+}
+
+a:hover {
+  color: unset;
+}
+
+/** Override bootstrap style */
+:root {
+  --bs-body-bg: #6c757d;
 }

@@ -4,7 +4,7 @@ import Handlebars from 'handlebars';
 
 @Injectable()
 export class HandlebarMiddleware implements NestMiddleware {
-  use(req: Request, next: NextFunction) {
+  use(req: Request, res: Response, next: NextFunction) {
     Handlebars.registerHelper('isUrlActive', function (value) {
       return req.originalUrl == value || req.originalUrl.includes(value + '/');
     });

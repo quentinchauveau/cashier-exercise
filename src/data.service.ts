@@ -24,10 +24,11 @@ export class DataService {
   /** Private methods */
   private loadTables(): Table[] {
     return [
-      new Table(1, TypeTable.square_2, 2, 0, 0),
-      new Table(2, TypeTable.square_4, 4, 0, 1),
-      new Table(3, TypeTable.square_4, 4, 1, 0),
-      new Table(4, TypeTable.round_4, 5, 1, 1),
+      new Table(1, TypeTable.rectangle_8, 0, 0),
+      new Table(2, TypeTable.square_2, 0, 1),
+      new Table(3, TypeTable.square_4, 1, 0),
+      new Table(4, TypeTable.square_4, 1, 1),
+      new Table(5, TypeTable.round_4, 1, 2),
     ];
   }
 

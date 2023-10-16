@@ -30,9 +30,13 @@ export class TablePanelService {
   }
 
   closeOrder() {
-    if (!this.table.order.canClose()) return;
+    if (!this.table.order?.canClose()) return;
     this.table.order.close();
     this.service.addOrder(Object.assign(new Order(), this.table.order));
+    this.table.close();
+  }
+
+  clearOrder() {
     this.table.close();
   }
 }

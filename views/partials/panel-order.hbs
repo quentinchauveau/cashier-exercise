@@ -3,12 +3,12 @@
         <thead class="sticky-top bg-light">
             <tr>
             <th scope="col">#</th>
-            <th scope="col">Name</th>
+            <th scope="col" style="max-width: 150px; min-width: 150px;">Name</th>
             <th scope="col" class="text-center">Quantité</th>
             <th scope="col" class="text-center">Prix Unitaire</th>
             <th scope="col" class="text-center">Prix Total</th>
             {{#if displayActions}}
-                <th scope="col"></th>
+                <th scope="col"  style="min-width: 40px;"></th>
             {{/if}}
             </tr>
         </thead>
@@ -16,7 +16,7 @@
             {{#each order.products}}
             <tr> 
                     <th scope="row">{{math @index "+" 1}}</th>
-                    <td class="text-truncate" style="max-width: 150px;">{{this.name}}</td>
+                    <td class="text-truncate" style="max-width: 150px; min-width: 150px;">{{this.name}}</td>
                     <td class="text-center">{{this.quantity}}</td>
                     <td class="text-center">{{this.price}}</td>
                     <td class="text-center">{{priceFixed this.total_price}} <i class="fas fa-euro-sign"></i></td>

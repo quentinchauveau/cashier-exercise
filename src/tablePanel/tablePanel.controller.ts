@@ -51,4 +51,10 @@ export class TablePanelController {
     this.service.closeOrder();
     return res.status(302).redirect(`${this.service.table.id}`);
   }
+
+  @Post('/clear')
+  clear(@Res() res) {
+    this.service.clearOrder();
+    return res.status(302).redirect(`${this.service.table.id}`);
+  }
 }
