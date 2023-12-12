@@ -33,7 +33,10 @@ L'objectif est de mettre en place une base de données et de créer un schéma d
 
 ## Installation
 
+Il vaut mieux avoir nvm d'installer sur sa machine. Ensuite, faire les commandes suivantes
+
 ```bash
+$ nvm use 18.18.0
 $ npm install
 ```
 
@@ -46,25 +49,15 @@ $ npm run start
 # watch mode
 $ npm run start:dev
 
-# production mode
-$ npm run start:prod
-
 # run lint
 $ npm run lint
 ```
 
-## Test
+## Screenshoots
 
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
+![alt text](https://github.com/quentinchauveau/cashier-exercise/tree/master/screen1.png?raw=true)
+![alt text](https://github.com/quentinchauveau/cashier-exercise/tree/master/screen2.png?raw=true)
+![alt text](https://github.com/quentinchauveau/cashier-exercise/tree/master/screen3.png?raw=true)
 
 ## Support
 
