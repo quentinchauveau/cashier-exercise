@@ -58,6 +58,7 @@ $ npm run lint
 ![alt text](https://github.com/quentinchauveau/cashier-exercise/tree/master/screen1.PNG?raw=true)
 ![alt text](https://github.com/quentinchauveau/cashier-exercise/tree/master/screen2.PNG?raw=true)
 ![alt text](https://github.com/quentinchauveau/cashier-exercise/tree/master/screen3.PNG?raw=true)
+![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Lion_d%27Afrique.jpg/550px-Lion_d%27Afrique.jpg?20150506193838)
 
 ## Support
 
