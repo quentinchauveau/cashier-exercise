@@ -55,9 +55,9 @@ $ npm run lint
 
 ## Screenshoots
 
-![alt text](https://github.com/quentinchauveau/cashier-exercise/tree/master/screen1.png?raw=true)
-![alt text](https://github.com/quentinchauveau/cashier-exercise/tree/master/screen2.png?raw=true)
-![alt text](https://github.com/quentinchauveau/cashier-exercise/tree/master/screen3.png?raw=true)
+![alt text](https://github.com/quentinchauveau/cashier-exercise/tree/master/screen1.PNG?raw=true)
+![alt text](https://github.com/quentinchauveau/cashier-exercise/tree/master/screen2.PNG?raw=true)
+![alt text](https://github.com/quentinchauveau/cashier-exercise/tree/master/screen3.PNG?raw=true)
 
 ## Support
 
